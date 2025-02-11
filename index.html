@@ -9,19 +9,21 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: url('image.png') no-repeat center center fixed;
+            background-size: cover;
             color: #333;
         }
         header {
-            background: #0077cc;
+            background: rgba(0, 119, 204, 0.8);
             color: white;
             text-align: center;
-            padding: 1em;
+            padding: 2em;
+            font-size: 2em;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 20px auto;
-            background: white;
+            background: rgba(255, 255, 255, 0.9);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -29,46 +31,76 @@
         .section {
             margin-bottom: 20px;
         }
-        iframe {
-            width: 100%;
-            height: 300px;
-            border: none;
+        form {
+            display: flex;
+            flex-direction: column;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 5px;
         }
-        footer {
-            text-align: center;
+        input, button {
             padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
             background: #0077cc;
             color: white;
-            margin-top: 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #005fa3;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Uni-Cup 2025</h1>
-        <p>Aalborg Freja, Vestre Fjordvej 15, 9000 Aalborg</p>
     </header>
     <div class="container">
         <div class="section">
-            <h2>Program</h2>
+            <h2>Tilmeld dit hold</h2>
+            <p>9-mandshold | Bekræftelsesmail sendes til kontaktpersonen</p>
+            <form>
+                <label for="team-name">Holdnavn:</label>
+                <input type="text" id="team-name" name="team-name" required>
+                
+                <label for="contact-person">Kontaktperson:</label>
+                <input type="text" id="contact-person" name="contact-person" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Telefon:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <button type="submit">Tilmeld hold</button>
+            </form>
+        </div>
+        <div class="section">
+            <h2>Om eventet</h2>
+            <p>På dagen vil Uni-Cup samle studerende fra hele Aalborg Universitet til en festlig og konkurrencedygtig atmosfære. Turneringen vil finde sted på Aalborg Frejas baner.</p>
+        </div>
+        <div class="section">
+            <h2>Detaljer</h2>
             <ul>
-                <li><strong>Kl.12.00</strong> – Eventet starter (Velkomst fra POLIS og medarrangører)</li>
-                <li><strong>Kl.12.30</strong> – Turnering starter (Kampe og aktiviteter begynder)</li>
-                <li><strong>Kl.17.15</strong> – Kåring af vinder</li>
-                <li><strong>Kl.17.30</strong> – Tak for i dag, vi ses i byen!</li>
+                <li><strong>Dato:</strong> Lørdag d. 28/06 – 2025</li>
+                <li><strong>Tid:</strong> Kl. 12.00 – 17.30</li>
+                <li><strong>Fodbold:</strong> 9-mandshold, puljeopdeling, 2x20 min. kampe</li>
+                <li><strong>Mad & Drikke:</strong> Pølser, vand, sodavand, fadøl, ciders</li>
+                <li><strong>Underholdning:</strong> RedBull DJ & udendørs spil</li>
+                <li><strong>Præmier:</strong> Stort trofæ & eksklusive fordele i Jomfru Ane Gade</li>
             </ul>
         </div>
         <div class="section">
-            <h2>Lokation</h2>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2263.9583269870454!2d9.892364!3d57.0341186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4649323cd8e94d23%3A0xe91f5935263e21d3!2sVestre%20Fjordvej%2015%2C%209000%20Aalborg!5e0!3m2!1sen!2sdk!4v1707664234312!5m2!1sen!2sdk" 
-                allowfullscreen>
-            </iframe>
-        </div>
-        <div class="section">
-            <h2>Kontakt</h2>
-            <p>Email: <a href="mailto:mba22@student.aau.dk">mba22@student.aau.dk</a></p>
-            <p>Telefon: <a href="tel:+4530664632">+45 30 66 46 32</a></p>
+            <h2>Tidsplan</h2>
+            <ul>
+                <li><strong>Kl.12.00</strong> – Eventet starter</li>
+                <li><strong>Kl.12.30</strong> – Turnering starter</li>
+                <li><strong>Kl.17.15</strong> – Kåring af vinder</li>
+                <li><strong>Kl.17.30</strong> – Tak for i dag, vi ses i byen!</li>
+            </ul>
         </div>
     </div>
     <footer>
